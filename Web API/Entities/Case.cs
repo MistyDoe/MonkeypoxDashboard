@@ -17,6 +17,5 @@ namespace Web_API.Entities
 
         public int ConfCases { get; set; }
 
-
     }
 }
