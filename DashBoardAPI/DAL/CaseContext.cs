@@ -1,7 +1,6 @@
 ﻿using DashBoardAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace DashBoardAPI.DAL
 {
     public class CaseContext : DbContext
@@ -14,6 +13,9 @@ namespace DashBoardAPI.DAL
             optionsBuilder.UseSqlite(
                 "Data Source=cases.db");
         }
+
+
     }
+
 }
 

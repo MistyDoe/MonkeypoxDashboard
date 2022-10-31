@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DashBoardAPI.Migrations
 {
     [DbContext(typeof(CaseContext))]
-    [Migration("20221017124558_CreateCaseDb")]
-    partial class CreateCaseDb
+    [Migration("20221031151313_InitialCreate2")]
+    partial class InitialCreate2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,18 +21,18 @@ namespace DashBoardAPI.Migrations
 
             modelBuilder.Entity("DashBoardAPI.Models.Case", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ConfCases")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CountryExp")
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("DateRep")
+                    b.Property<DateTime>("date")
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("location")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("total_cases")
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 

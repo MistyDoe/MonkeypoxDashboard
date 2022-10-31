@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashBoardAPI", "DashBoardAPI.csproj", "{EC6ECDB9-D7F4-4BCE-9354-19E32FFC1C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DashBoardAPI", "DashBoardAPI.csproj", "{EC6ECDB9-D7F4-4BCE-9354-19E32FFC1C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSeeding", "..\DataSeeding\DataSeeding.csproj", "{9849E8B1-3BA9-4B65-A2AE-5CC6D9A7B77C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EC6ECDB9-D7F4-4BCE-9354-19E32FFC1C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC6ECDB9-D7F4-4BCE-9354-19E32FFC1C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC6ECDB9-D7F4-4BCE-9354-19E32FFC1C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9849E8B1-3BA9-4B65-A2AE-5CC6D9A7B77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9849E8B1-3BA9-4B65-A2AE-5CC6D9A7B77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9849E8B1-3BA9-4B65-A2AE-5CC6D9A7B77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9849E8B1-3BA9-4B65-A2AE-5CC6D9A7B77C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

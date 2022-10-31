@@ -1,10 +1,13 @@
-﻿namespace DashBoardAPI.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DashBoardAPI.Models
 {
+    [Table("Cases")]
     public class Case
     {
-        public int Id { get; set; }
-        public DateTime DateRep { get; set; }
-        public string? CountryExp { get; set; }
-        public int ConfCases { get; set; }
+        public string Id { get; set; }
+        public DateTime date { get; set; }
+        public string location { get; set; }
+        public double total_cases { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DashBoardAPI.Migrations
 {
-    public partial class CreateCaseDb : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,11 +13,10 @@ namespace DashBoardAPI.Migrations
                 name: "Cases",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    DateRep = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    CountryExp = table.Column<string>(type: "TEXT", nullable: true),
-                    ConfCases = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    date = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    location = table.Column<string>(type: "TEXT", nullable: false),
+                    total_cases = table.Column<double>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {
