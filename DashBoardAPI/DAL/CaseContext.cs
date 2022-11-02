@@ -8,11 +8,9 @@ namespace DashBoardAPI.DAL
         public DbSet<Case> Cases { get; set; }
 
         protected override void OnConfiguring (
-            DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite(
-                "Data Source=cases.db");
-        }
+            DbContextOptionsBuilder optionsBuilder) => optionsBuilder
+            .LogTo(Console.WriteLine)
+            .UseSqlite("Data Source=cases.db");
 
 
     }
