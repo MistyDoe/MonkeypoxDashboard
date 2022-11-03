@@ -28,7 +28,7 @@ namespace DashBoardAPI.Controllers
                 .ToListAsync();
 
             return cases != null ?
-                Ok(CasesForCnty(cases)) :
+                Ok(cases) :
                 Problem("no cases");
         }
 

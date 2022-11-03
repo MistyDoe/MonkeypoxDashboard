@@ -12,7 +12,7 @@ namespace DashBoardAPI.Services
             ScriptSource source = engine.CreateScriptSourceFromFile("arima.py");
             ScriptScope scope = engine.CreateScope();
             scope.SetVariable("data", cases);
-            return
+            throw new NotImplementedException();
         }
     }
 }
