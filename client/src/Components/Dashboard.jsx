@@ -1,11 +1,10 @@
-import Country from "./Country"
+import CountryList from "./CountryList";
+import "../App.css";
 
 export default function Dashboard() {
-
-return (
-    <>
-    <Country/>
-    
-    </>
-)
+	return (
+		<>
+			<CountryList classname="CountryList" />
+		</>
+	);
 }

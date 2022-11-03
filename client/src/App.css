@@ -6,6 +6,14 @@
   height: 40vmin;
   pointer-events: none;
 }
+.CountryList{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown{
+  padding-bottom: 30vh;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
