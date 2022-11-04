@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Graph from "./Graph";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
+import "../App.css";
 
 export default function CountryList() {
 	const [loading, setLoading] = useState(false);
@@ -35,22 +34,17 @@ export default function CountryList() {
 		return <></>;
 	}
 	return (
-		<>
-			{
-				<Dropdown>
-					<Dropdown.Toggle>Country List</Dropdown.Toggle>
-					<Dropdown.Menu>
+		<>			
+		<div className="selection">
 						{countryList.map((country) => (
-							<Dropdown.Item
+							<button
 								value={country}
 								onClick={() => handleCountrySelect(country)}
 							>
-								<button>{country}</button>
-							</Dropdown.Item>
+								{country}
+							</button>
 						))}
-					</Dropdown.Menu>
-				</Dropdown>
-			}
+		</div>
 			<Graph country={countrySent} />
 		</>
 	);
