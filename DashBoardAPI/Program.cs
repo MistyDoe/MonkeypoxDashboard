@@ -7,6 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CaseContext>(options =>
    options.UseSqlite("Data source = cases.db "));
 builder.Services.AddControllers();
+builder.Services.AddCors(opt =>
+{
+    opt.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,9 +27,13 @@ if ( app.Environment.IsDevelopment() )
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors();
+
 }
 
+
 app.UseHttpsRedirection();
+
 
 app.UseAuthorization();
 
