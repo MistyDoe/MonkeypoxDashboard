@@ -34,14 +34,14 @@ export default function Graph({ country }) {
 
 	return (
 		<>
-			<div className=".graph">
-				<div> Cases for {countryName} </div>
+			<div className="graph">
+				<div className="graph__title"> Cases for {countryName} </div>
 				<div>
 					<LineChart
 						width={730}
 						height={250}
 						data={countryData}
-						margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+						margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
 					>
 						<CartesianGrid strokeDasharray="3 3" />
 						<XAxis dataKey="date" hide="true" />

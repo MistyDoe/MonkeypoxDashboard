@@ -6,13 +6,38 @@
   height: 40vmin;
   pointer-events: none;
 }
-.CountryList{
+
+.HeaderSection{
   display: flex;
   flex-direction: column;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategrey;
 }
+.Selection__title{
+font-size: normal;
+border: transparent;
 
-.dropdown{
-  padding-bottom: 30vh;
+}
+.selection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(231, 241, 234);
+  padding: 1vw;
+}
+.selectionOff{
+  visibility: collapse;
+}
+.selection__button{
+  border: hidden;
+}
+.graph{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

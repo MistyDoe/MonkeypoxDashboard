@@ -7,7 +7,22 @@ export default function CountryList() {
 	const [countryList, setCountryList] = useState();
 	const [selectedCountry, setSelectedCountry] = useState();
 	const [countrySent, setCountrySent] = useState();
-	const [closed, setClosed] = useState(true);
+	const [listShown, setListShown] = useState (false);
+
+	let listToggle="selectionOff";
+	const handleCountrySelect = (country) => {
+		setSelectedCountry(country);
+		setListShown (false)
+		console.log(selectedCountry + "selected");
+	};
+	const showList =() =>{
+		if(listShown===false){
+			setListShown(true)
+		}
+		if (listShown===true){
+			setListShown(false)
+		}
+	}
 
 	useEffect(() => {
 		fetch("http://localhost:5152/api/Case")
@@ -15,29 +30,31 @@ export default function CountryList() {
 			.then((json) => {
 				setCountryList(json);
 				setLoading(true);
-				setClosed(false);
+		
 				console.log(countryList);
 			});
 	}, []);
-
-	const handleCountrySelect = (country) => {
-		setSelectedCountry(country);
-		console.log(selectedCountry + "selected");
-	};
 
 	useEffect(() => {
 		setCountrySent(selectedCountry);
 		console.log(countrySent);
 	}, [selectedCountry]);
 
+
 	if (loading === false) {
 		return <></>;
 	}
+	if (listShown=== true){
+		listToggle= "selection"
+	}else{
+		listToggle="selectionOff"
+	}
 	return (
 		<>			
-		<div className="selection">
+		<button className="Selection__title" onClick={showList}> Country List</button>
+		<div className={listToggle}>
 						{countryList.map((country) => (
-							<button
+							<button className="selection__button "
 								value={country}
 								onClick={() => handleCountrySelect(country)}
 							>
