@@ -14,8 +14,6 @@ namespace DashBoardAPI.Controllers
         {
             _context = context;
         }
-
-        // GET: Case
         [HttpGet("{country}")]
         public async Task<IActionResult> CasesCountry (string country)
         {
@@ -32,7 +30,6 @@ namespace DashBoardAPI.Controllers
                 Problem("no cases");
         }
 
-        // GET: Case/Details/5
         [HttpGet]
         public async Task<IActionResult> CountryList ( )
         {
